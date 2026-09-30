@@ -2,18 +2,16 @@ name: Python CI
 
 on:
   push:
-    branches: [main]
+      branches: [main]
   pull_request:
-    branches: [main]
+      branches: [main]
 
 jobs:
   lint-and-test:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
